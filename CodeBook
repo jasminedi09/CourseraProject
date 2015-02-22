@@ -1,0 +1,43 @@
+Original Data 
+
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+
+The script run_analysis.R performs the following process to clean up the data and create tiny data sets:
+
+Merge the training and test sets to create one data set.
+
+Reads features.txt and uses only the measurements on the mean and standard deviation for each measurement.
+
+Reads activity_labels.txt and applies human readable activity names to name the activities in the data set.
+
+Labels the data set with descriptive names. (Names are converted to lower case; underscores and brackets are removed.)
+
+Merges the features with activity labels and subject IDs. The result is saved as tidyData.txt.
+
+The average of each measurement for each activity and each subject is merged to a second data set. The result is saved as tidyData2.txt.
+
+
+Datasets and Variables:
+
+dat.test: dataset of test/X_test.txt
+dat.train: dataset of train/X_train.txt
+dat: Combined dataset of dat.test and dat.train datasets
+sub.test: dataset of test/subject_test.txt
+sub.train: dataset of test/subject_train.txt
+sub: Combined dataset of sub.test and sub.train datasets
+label.test: dataset of test/y_test.txt
+label.train - dataset of train/y_train.txt
+label: Combined data set of label.test and label.train dataset
+dat.extrated: Extracted dataset only contains the measurements on the mean and standard deviation for each measurement. 
+colname: features.txt, contains columns' name
+label.activity: activity_labels.txt, contains name of activity
+data.tidy: tidy and combined dataset with readable columns' and rows' name.
+data.tidy.2nd: dataset with the average of each variable for each activity and each subject.
+
+tidyData.txt is a 10299x68 data frame.
+
+The first column is activity
+The last column is subject
+The columns in between the first column and the last column are average of measurements
+
